@@ -1,4 +1,5 @@
 import Logo from './Logo'
+import { FC } from 'react'
 import NextLink from 'next/link'
 import {
   Container,
@@ -15,7 +16,7 @@ import {
   useColorModeValue
 } from '@chakra-ui/react'
 import { HamburgerIcon } from '@chakra-ui/icons'
-import { FC } from 'react'
+import ThemeToggleButton from './theme-toggle-button'
 
 interface ILinkProps {
   href?: string
@@ -82,6 +83,8 @@ const Navbar: FC<any> = props => {
           </LinkItem>
         </Stack>
         <Box flex={1} align="right">
+        <ThemeToggleButton />
+
           <Box ml={2} display={{ base: 'inline-block', md: 'none' }}>
             <Menu>
               <MenuButton
