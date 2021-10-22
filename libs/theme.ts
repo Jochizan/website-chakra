@@ -17,7 +17,7 @@ const styles = {
 
 const components = {
   Heading: {
-    variant: {
+    variants: {
       'section-title': {
         textDecoration: 'underline',
         fontSize: 20,

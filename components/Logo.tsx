@@ -18,7 +18,7 @@ const LogoBox = styled.span`
 `
 
 const Logo = () => {
-  const footPrintImg = `/images/gootprint${useColorModeValue('', '-dark')}.png`
+  const footPrintImg = `/images/footprint${useColorModeValue('', '-dark')}.png`
 
   return (
     <Link href="/">
