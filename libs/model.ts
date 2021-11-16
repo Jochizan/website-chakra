@@ -10,7 +10,7 @@ export function loadGLTFModel(
   return new Promise((resolve, reject) => {
     const loader = new GLTFLoader()
 
-    loader.load(glbPath, (gltf) => {
+    loader.load(glbPath, gltf => {
       const obj = gltf.scene
       obj.name = 'dog'
       obj.position.y = 0
@@ -20,10 +20,8 @@ export function loadGLTFModel(
       scene.add(obj)
 
       obj.traverse(function (child) {
-        if (child?.isMesh) {
-          child.castShadow = castShadow
-          child.receiveShadow = receiveShadow
-        }
+        child.castShadow = castShadow
+        child.receiveShadow = receiveShadow
       })
 
       resolve(obj)

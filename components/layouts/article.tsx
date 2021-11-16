@@ -9,7 +9,7 @@ const variants = {
   exit: { opacity: 0, x: -0, y: 20 }
 }
 
-const Layout: FC<{ title: string }> = ({ children, title }) => (
+const Layout: FC<{ title?: string }> = ({ children, title }) => (
   <motion.article
     initial="hidden"
     animate="enter"

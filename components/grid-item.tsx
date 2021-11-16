@@ -7,7 +7,7 @@ import { Global } from '@emotion/react'
 interface IPropsGridItem {
   href: string
   title: string
-  thumbnail: string
+  thumbnail: StaticImageData
 }
 
 export const GridItem: FC<IPropsGridItem> = ({
@@ -24,12 +24,11 @@ export const GridItem: FC<IPropsGridItem> = ({
         className="grid-item-thumbnail"
         placeholder="blur"
         loading="lazy"
-      >
-        <LinkOverlay href={href} target="_blank">
-          <Text mt={2}>{title}</Text>
-        </LinkOverlay>
-        <Text fontSize={14}>{children}</Text>
-      </Image>
+      />
+      <LinkOverlay href={href} target="_blank">
+        <Text mt={2}>{title}</Text>
+      </LinkOverlay>
+      <Text fontSize={14}>{children}</Text>
     </LinkBox>
   </Box>
 )
